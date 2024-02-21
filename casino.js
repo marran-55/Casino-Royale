@@ -4,6 +4,15 @@ var types_1 = require("../project/types");
 var stack_1 = require("../lib/stack");
 var PromptSync = require("prompt-sync");
 var prompt = PromptSync();
+function ace_check(to_check) {
+    for (var i = 0; i < to_check.cards.length; i++) {
+        if (to_check.cards[i].rank === "A") {
+            to_check.total_cards_value -= 10;
+            return true;
+        }
+    }
+    return false;
+}
 function players_hand(deck, player, n_o_cards) {
     var counter = 0;
     while (!(0, stack_1.is_empty)(deck.stack) && n_o_cards > counter) {
