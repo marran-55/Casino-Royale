@@ -1,6 +1,5 @@
 import {createDeck, deck, card, player, shuffle, array_to_stack, dealer} from '../Casino-Royale/types'
 import { Stack, empty, push, top, pop, display_stack, NonEmptyStack, is_empty} from '../lib/stack';
-import * as readline from 'readline';
 import * as PromptSync from 'prompt-sync';
 const prompt = PromptSync();
 
@@ -46,7 +45,9 @@ function evaluate_hand(deck: deck, dealer: dealer) {
                                          dealer.total_cards_value);
     }
     if (dealer.total_cards_value > 21) {
-        return ;
+        if (ace_check(dealer)){
+            evaluate_hand(deck, dealer)
+        }
     } else if (dealer.total_cards_value > 16) {
         return dealer;
     } else if (dealer.total_cards_value <= 21) {
@@ -115,7 +116,12 @@ function black_jack(card_deck: deck, player : player, dealer: dealer){
         }
         
     }   else {
-     console.log(player.name, " bust, Dealer wins")   
+        if (ace_check(player)){
+            black_jack(card_deck, player, dealer)
+        } else {
+            compare_hands(player, dealer)
+        }
+        
 }}
  function black_jack_setup(): void {
     let card_deck: deck = {stack: empty<card>(), Arr: []};
