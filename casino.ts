@@ -1,6 +1,5 @@
-import {createDeck, deck, card, player, shuffle, array_to_stack, dealer} from '../Casino-Royale/types'
+import {createDeck, deck, card, player, shuffle, array_to_stack, dealer} from '../project/types'
 import { Stack, empty, push, top, pop, display_stack, NonEmptyStack, is_empty} from '../lib/stack';
-import * as readline from 'readline';
 import * as PromptSync from 'prompt-sync';
 const prompt = PromptSync();
 
