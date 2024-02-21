@@ -1,9 +1,19 @@
-import {createDeck, deck, card, player, shuffle, array_to_stack, dealer} from '../project/types'
+import {createDeck, deck, card, player, shuffle, array_to_stack, dealer} from '../Casino-Royale/types'
 import { Stack, empty, push, top, pop, display_stack, NonEmptyStack, is_empty} from '../lib/stack';
 import * as readline from 'readline';
 import * as PromptSync from 'prompt-sync';
 const prompt = PromptSync();
 
+function ace_check(to_check : dealer | player): boolean{
+    for(let i = 0; i < to_check.cards.length; i ++){
+        if (to_check.cards[i].rank === "A"){
+            to_check.total_cards_value -= 10
+            return true
+        }
+    
+    }
+    return false
+}
 
 function players_hand(deck : deck, player: player | dealer, n_o_cards : number): Array<card>{
     let counter = 0
