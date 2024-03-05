@@ -65,7 +65,7 @@ function login() {
                     var new_user = { username: username, password: password, balance: 0 };
                     user_data.push(new_user);
                     fs.writeFileSync(filePath, JSON.stringify(user_data, null, 2), 'utf-8');
-                    return new_user;
+                    return new_user; // appends our new user to our user file and returns the user
                 }
                 else {
                     console.log("Username already taken.");

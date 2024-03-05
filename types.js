@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.array_to_stack = exports.shuffle = exports.createDeck = exports.make_rank = exports.make_suit = void 0;
-var stack_1 = require("../lib/stack");
+var stack_1 = require("../../lib/stack");
 /**
  * This function takes a number and converts it to the correct suit
  * @param {number} num - the number divides by four as the cards are in the order A♣, A♥, A♠, A♦, 1♣,(...)
