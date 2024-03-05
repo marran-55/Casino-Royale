@@ -129,6 +129,8 @@ function menu(user) {
 * @param {player} player - Object representing the player's hand.
 * @param {deck} card_deck - Object representing the deck of cards.
 * @param {number} bet - The bet amount placed by the player.
+* @example const new_balance = black_jack(dealer, "Martin", card_deck, 100).
+* @precondition Dealer, player and card_deck must have been initialized.
 * @returns {number} - The updated balance of the player.
 */
 function black_jack(dealer, player, card_deck, bet) {
@@ -174,6 +176,7 @@ exports.black_jack = black_jack;
 * Simulates a game of roulette.
 * @param {number} balance - The current balance of the player.
 * @returns {number} - The updated balance of the player after the game.
+*
 */
 function roulette(balance) {
     while (balance > 0) {

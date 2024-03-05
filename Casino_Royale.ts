@@ -99,7 +99,8 @@ function login(): user {
 /**
  * Displays the menu and handles the user choices for the different games. 
  * @param {user} user - The user object representing the current user.
- * @returns {user} - The updated user object.
+ * @returns {user} - The updated user object.'
+ * @precondition - user must be a valid user
  */  
 function menu(user: user): user {
   while (true) {
@@ -132,6 +133,8 @@ function menu(user: user): user {
  * @param {player} player - Object representing the player's hand. 
  * @param {deck} card_deck - Object representing the deck of cards.
  * @param {number} bet - The bet amount placed by the player.
+ * @example const new_balance = black_jack(dealer, "Martin", card_deck, 100);.
+ * @precondition Dealer, player and card_deck must have been initialized.
  * @returns {number} - The updated balance of the player. 
  */
   export function black_jack(dealer: dealer, player: player,
@@ -176,6 +179,8 @@ function menu(user: user): user {
   /**
  * Simulates a game of roulette.
  * @param {number} balance - The current balance of the player.
+ * @example const new_balance = roulette(10);
+ * @precondition Input must be a number
  * @returns {number} - The updated balance of the player after the game.
  */
   export function roulette(balance: number): number {
@@ -200,6 +205,8 @@ function menu(user: user): user {
   /**
  * Simulates a game of slots.
  * @param {number} funds - The current funds of the player.
+ * @example const new_balance = slots(100);.
+ * @precondition Input must be a number.
  * @returns {number} - The updated funds of the player after the game.
  */
   export function slots(funds: number): number {
@@ -210,8 +217,7 @@ function menu(user: user): user {
       const qplay = prompt("1. Play the slot machine, 2. Exit: ")
   
       if (qplay === "1") {
-        let hej = arr.map(x => x[Math.floor(Math.random() * x.length)]);
-  
+        let hej = arr.map(x => x[Math.floor(Math.random() * x.length)]); 
         if (hej[0] === hej[1] && hej[0] === hej[2]) {
           funds = funds + 50;
           console.log(hej,": You won 50 bucks!")
@@ -227,9 +233,8 @@ function menu(user: user): user {
       }
     }
     console.log("Out of funds, returning home!")
-    return funds;
-    
-  }
+    return funds;   
+}
   
 let user = login()
 console.log("Balance:", user.balance)

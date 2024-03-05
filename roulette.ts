@@ -3,12 +3,12 @@ const prompt = PromptSync();
 
 const red = [0,1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36]
 const black = [0,2,4,6,8,10,11,13,15,17,20,22,24,26,28,29,31,33,35]
-const board = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20
-                ,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36]
+
 /**
  * Evaluates the outcome of a roulette game based on the where the roulette ball stopped,
  * player's choice of game, bet, and current balance.
  * @param {number} spinner - where the ball stopped at
+ * @example 
  * @param {string} choice - The player's choice of game.
  * @param {number} bet - The amount of bet placed.
  * @param {number} balance - The players current balance.
@@ -66,8 +66,8 @@ export function evaluator(spinner: number, choice: string,
             console.log("Lost. Balance: ", balance)
         }
     } else if (choice === "8") {
-        const chosenNumber = parseInt(prompt("Choose a single digit (0-36): "));
-        if (chosenNumber === spinner) {
+        const chosen_number = parseInt(prompt("Choose a single digit (0-36): "));
+        if (chosen_number === spinner) {
             balance = balance + bet * 30;
             console.log("Win! Balance:", balance) 
         } else {
