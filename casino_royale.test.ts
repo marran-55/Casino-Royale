@@ -8,7 +8,7 @@ import {
     evaluate_player
   } from './blackjack';
   import { player, dealer, deck, card, createDeck, array_to_stack } from './types';
-  import { empty } from '../lib/stack';
+  import { empty } from '../../lib/stack';
   import { evaluator } from './roulette';
   
   describe('Blackjack Functions', () => {
