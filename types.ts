@@ -1,4 +1,4 @@
-import { Stack, empty, push, top, display_stack, NonEmptyStack} from '../lib/stack';
+import { Stack, empty, push, top, display_stack, NonEmptyStack} from '../../lib/stack';
 /* Type declarations  */
 //user record containing information about each user
 export type user = {
