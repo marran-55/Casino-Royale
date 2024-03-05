@@ -1,0 +1,55 @@
+body {
+    font-family: 'ITC Benguiat';
+    src: url('ITC\ Benguiat/BenguiatSTD-Medium.otf') format('truetype');
+    text-align: center;
+    background-image: url(./pictures/bakgrund_index.jpeg);
+    background-size: cover; 
+    color: white;
+}
+header img {
+    height: 80px;
+}
+
+#dealer-cards img,
+#card-container img {
+    height: 200px;
+    width: 140px;
+    margin: 3px;
+}
+
+#hit {
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+    font-size: 16px;
+    margin: 4px 2px;
+    padding: 16px 32px;
+    cursor: pointer;
+}
+
+#stand {
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+    font-size: 16px;
+    margin: 4px 2px;
+    padding: 16px 32px;
+    cursor: pointer;
+}
+#play-again {
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+    font-size: 16px;
+    margin: 4px 2px;
+    padding: 16px 32px;
+    cursor: pointer;
+}
+
+#messages {
+    text-align: center;
+    font-size: 20px;
+    font-family: Roboto;
+
+}
+

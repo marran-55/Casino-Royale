@@ -8,7 +8,7 @@ const black = [0,2,4,6,8,10,11,13,15,17,20,22,24,26,28,29,31,33,35]
  * Evaluates the outcome of a roulette game based on the where the roulette ball stopped,
  * player's choice of game, bet, and current balance.
  * @param {number} spinner - where the ball stopped at
- * @example 
+ * @example - evaluator(12, "1", 12, 900); returns balance = 924
  * @param {string} choice - The player's choice of game.
  * @param {number} bet - The amount of bet placed.
  * @param {number} balance - The players current balance.
