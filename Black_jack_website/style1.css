@@ -73,3 +73,13 @@ nav ul li a:hover {
     display: block;
     margin: auto;
 }
+
+#button {
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+    font-size: 16px;
+    margin: 4px 2px;
+    padding: 16px 32px;
+    cursor: pointer;
+}
