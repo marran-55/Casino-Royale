@@ -1,5 +1,5 @@
 import {createDeck, deck, card, player, shuffle, array_to_stack, dealer} from './types'
-import { empty, top, pop} from '../lib/stack';
+import { empty, top, pop} from '../../lib/stack';
 
 /**
  * Checks the hand of a player or dealer for the presence of Aces and adjusts the total card value accordingly.
@@ -64,7 +64,7 @@ export function draw_cards(active_player: player | dealer,
                            deck: deck, cards_to_draw:number = 1): void{
     for(let i = 0; i < cards_to_draw; i++){
         if (deck.stack !== null){
-            let drawn_card = top(deck.stack)
+            let drawn_card: card = top(deck.stack)
             active_player.total_cards_value += cards_value(drawn_card.rank)
             active_player.cards.push(drawn_card)
             deck.stack = pop(deck.stack)            

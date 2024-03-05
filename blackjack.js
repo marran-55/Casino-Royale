@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.black_jack_setup = exports.compare_hands = exports.dealer_cards = exports.draw_cards = exports.cards_value = exports.evaluate_player = exports.ace_check = void 0;
 var types_1 = require("./types");
-var stack_1 = require("../lib/stack");
+var stack_1 = require("../../lib/stack");
 /**
  * Checks the hand of a player or dealer for the presence of Aces and adjusts the total card value accordingly.
  * @param {dealer | player} to_check - An object representing either a dealer or a player.
