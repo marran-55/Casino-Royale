@@ -77,6 +77,6 @@ export function evaluator(spinner: number, choice: string,
         console.log("Invalid input, returning home!")
         return balance;
     }
-
+    console.log("Ball stopped at: ",spinner)
     return balance;
 }
